@@ -1,9 +1,15 @@
 # QR Code Registration System
-
-ระบบลงทะเบียนผู้เข้าร่วมงานด้วยการสแกน QR Code หรือกรอกข้อมูลด้วยตนเอง พัฒนาด้วย [CodeIgniter 4] และเชื่อมต่อฐานข้อมูลต่างๆ
+ - The event registration system allows participants to register by scanning a QR code or manually entering their information. It is developed using [CodeIgniter 4] and is connected to various databases.
+ - ระบบลงทะเบียนผู้เข้าร่วมงานด้วยการสแกน QR Code หรือกรอกข้อมูลด้วยตนเอง พัฒนาด้วย [CodeIgniter 4] และเชื่อมต่อฐานข้อมูลต่างๆ
 
 ## Features
-
+ - Supports QR code scanning
+ - Allows manual input of an 8-digit numeric code
+ - Saves data to the database with a timestamp
+ - Prevents duplicate registration
+ - Exports data as a CSV file
+ - Displays registered information
+   
 - รองรับการสแกน QR Code
 - กรอกข้อมูลรหัสแบบ Manual ได้ (เฉพาะตัวเลข 8 หลัก)
 - บันทึกลงฐานข้อมูล พร้อม timestamp
@@ -13,13 +19,13 @@
 
 ## Requirements
 
-- PHP >= 7.4 (แนะนำ 8.0+)
-- SQL Server Express 2018 หรือ MySql
+- PHP >= 7.4 (recommend 8.0+)
+- SQL Server Express 2018 or MySql
 - CodeIgniter 4.1.9
 
 ## Database ##
 
-CREATE TABLE `qr_codes` (
+CREATE TABLE qr_codes (
   id int(11) NOT NULL,
   code_data varchar(255) NOT NULL,
   scan_time timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
