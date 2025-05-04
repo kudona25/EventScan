@@ -14,10 +14,8 @@
 ## Requirements
 
 - PHP >= 7.4 (แนะนำ 8.0+)
-- SQL Server (แนะนำ SQL Server Express 2018 ขึ้นไป)
-- ODBC Driver 17 for SQL Server
+- SQL Server Express 2018 หรือ MySql
 - CodeIgniter 4.1.9
-- Composer
 
 ## Database ##
 
