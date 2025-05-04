@@ -1,3 +1,36 @@
+# QR Code Registration System
+
+ระบบลงทะเบียนผู้เข้าร่วมงานด้วยการสแกน QR Code หรือกรอกข้อมูลด้วยตนเอง พัฒนาด้วย [CodeIgniter 4] และเชื่อมต่อฐานข้อมูลต่างๆ
+
+## Features
+
+- รองรับการสแกน QR Code
+- กรอกข้อมูลรหัสแบบ Manual ได้ (เฉพาะตัวเลข 8 หลัก)
+- บันทึกลงฐานข้อมูล พร้อม timestamp
+- ป้องกันการลงทะเบียนซ้ำ
+- ส่งออกข้อมูลเป็น CSV
+- แสดงข้อมูลที่ลงทะเบียนแล้ว
+
+## Requirements
+
+- PHP >= 7.4 (แนะนำ 8.0+)
+- SQL Server (แนะนำ SQL Server Express 2018 ขึ้นไป)
+- ODBC Driver 17 for SQL Server
+- CodeIgniter 4.1.9
+- Composer
+
+## Database ##
+
+CREATE TABLE `qr_codes` (
+  id int(11) NOT NULL,
+  code_data varchar(255) NOT NULL,
+  scan_time timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  device_info varchar(255) DEFAULT NULL,
+  created_at datetime DEFAULT CURRENT_TIMESTAMP,
+  updated_at datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+)
+
+
 # CodeIgniter 4 Application Starter
 
 ## What is CodeIgniter?
