@@ -34,6 +34,7 @@ CREATE TABLE qr_codes (
   updated_at datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 )
 
+![alt text](https://github.com/kudona25/QREventScan/blob/main/Screenshot%20from%202025-05-05%2008-58-24.png?raw=true)
 
 # CodeIgniter 4 Application Starter
 
